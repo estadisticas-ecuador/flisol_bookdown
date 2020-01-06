@@ -1,6 +1,23 @@
 book_filename: "flisol_bookdown"
 delete_merged_file: true
 language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    cnj: 'Conjetura '
+    def: 'Definición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Prueba. '
+    remark: 'Remark. '
+    solution: 'Solución. '
   ui:
-    chapter_name: "Chapter "
+    edit: Editar
+    chapter_name: "Capítulo "
+    appendix_name: "Apéndice "
 output_dir: "docs"
