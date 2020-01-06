@@ -1,0 +1,7 @@
+# Visualización Estática y Dinámica {#visualizacion}
+
+Rmarkdown permite visualizar tablas y figuras de forma
+
+## V. Estática
+
+## V. Dinámica
