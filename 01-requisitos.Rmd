@@ -1,32 +1,15 @@
----
-output:
-  word_document: default
-  html_document: default
----
 # Requisitos para el taller {#requi}
 
-<<<<<<< HEAD
-**Recursos:**
-=======
 Recursos:
->>>>>>> 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
 
 1. Lenguaje de programación estadística **R:** <https://cran.r-project.org/>
 1. Interfaz de desarrollo integrado **Rstudio:** <https://rstudio.com/products/rstudio/download/>
 1. **Rtools:** <https://cran.r-project.org/bin/windows/Rtools/>
 1. **MiKTeX:** <https://miktex.org/download>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en que fueron enumerados.
-=======
-***Nota:*** Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
->>>>>>> 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
-=======
 ***Nota:*** Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.  
->>>>>>> 503c86fda5119bd72ddf76a272ac0f8f7c01d560
 
-**Paquetes:** 
+**Paquetes:**
 
 1. ``tidyverse``
 
@@ -46,4 +29,3 @@ install.packages("bookdown")
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
-
