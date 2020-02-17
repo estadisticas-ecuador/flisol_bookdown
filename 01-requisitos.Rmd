@@ -7,9 +7,9 @@ Recursos:
 1. **Rtools:** <https://cran.r-project.org/bin/windows/Rtools/>
 1. **MiKTeX:** <https://miktex.org/download>
 
-Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
+***Nota:*** Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
 
-**Paquetes:**
+**Paquetes:** 
 
 1. ``tidyverse``
 
