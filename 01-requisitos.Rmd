@@ -1,13 +1,18 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Requisitos para el taller {#requi}
 
-Es **altamente recomendable** que los asistentes que prefieran utilizar sus laptops, tengan previamente instalados los siguientes recursos:
+**Recursos:**
 
 1. Lenguaje de programación estadística **R:** <https://cran.r-project.org/>
 1. Interfaz de desarrollo integrado **Rstudio:** <https://rstudio.com/products/rstudio/download/>
 1. **Rtools:** <https://cran.r-project.org/bin/windows/Rtools/>
 1. **MiKTeX:** <https://miktex.org/download>
 
-Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
+Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en que fueron enumerados.
 
 **Opcional:**
 
