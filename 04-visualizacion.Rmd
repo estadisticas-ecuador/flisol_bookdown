@@ -4,4 +4,15 @@ Rmarkdown permite visualizar tablas y figuras de forma
 
 ## V. Estática
 
+```{r}
+knitr::kable(head(iris, 10))
+```
+
+
 ## V. Dinámica
+
+```{r}
+DT::datatable({
+  iris
+})
+```
