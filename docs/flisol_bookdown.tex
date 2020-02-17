@@ -1,36 +1,46 @@
-\documentclass[]{book}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
-\usepackage[unicode=true]{hyperref}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={R como herramienta de escritura académico-científica con visualización estática y dinámica},
-            pdfauthor={Alexander Andrade},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-\usepackage{natbib}
-\bibliographystyle{apalike}
+  pdftitle={R como herramienta de escritura académico-científica con visualización estática y dinámica},
+  pdfauthor={Alexander Andrade},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -40,40 +50,46 @@
 \usepackage{framed}
 \definecolor{shadecolor}{RGB}{248,248,248}
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -83,102 +99,71 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-% set default figure placement to htbp
+% Set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
 
-\title{R como herramienta de escritura académico-científica con visualización
-estática y dinámica}
+\title{R como herramienta de escritura académico-científica con visualización estática y dinámica}
 \author{Alexander Andrade}
 \date{2020-02-17}
 
 \begin{document}
+\frontmatter
 \maketitle
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{Resumen}\label{resumen}
+\mainmatter
+\hypertarget{resumen}{%
+\chapter{Resumen}\label{resumen}}
 
-R es un lenguaje de programación estadística, que permite: importar,
-gestionar, analizar y presentar información (datos), con un alto nivel
-de reproducibilidad. Consolidándose así, como el software ideal en:
-estadística, machine learning, ciencia de datos, etc.
+R es un lenguaje de programación estadística, que permite: importar, gestionar, analizar y presentar información (datos), con un alto nivel de reproducibilidad. Consolidándose así, como el software ideal en: estadística, machine learning, ciencia de datos, etc.
 
-En el taller denominado \emph{R como herramienta de escritura
-académico-científica con visualización estática y dinámica}, se estudian
-las ventajas que ofrece el paquete \texttt{rmarkdown}, el cual permite
-generar reportes estáticos y dinámicos, con el fin de divulgar tanto los
-resultados de un estudio, como su metodología y el código utilizado.
+En el taller denominado \emph{R como herramienta de escritura académico-científica con visualización estática y dinámica}, se estudian las ventajas que ofrece el paquete \texttt{rmarkdown}, el cual permite generar reportes estáticos y dinámicos, con el fin de divulgar tanto los resultados de un estudio, como su metodología y el código utilizado.
 
-Particularmente, el taller se enfoca en la creación de libros
-académico-científicos (en formato HTML, EPUB y PDF) mediante el paquete
-\texttt{bookdown}, mismo que puede entenderse como una extensión de
-\texttt{rmarkdown}. Al finalizar el taller, los asistentes adquirirán la
-capacidad de crear libros como el que se está visualizando en este
-momento.
+Particularmente, el taller se enfoca en la creación de libros académico-científicos (en formato HTML, EPUB y PDF) mediante el paquete \texttt{bookdown}, mismo que puede entenderse como una extensión de \texttt{rmarkdown}. Al finalizar el taller, los asistentes adquirirán la capacidad de crear libros como el que se está visualizando en este momento.
 
-\chapter{Requisitos para el taller}\label{requi}
+\hypertarget{requi}{%
+\chapter{Requisitos para el taller}\label{requi}}
 
-<<<<<<< HEAD
+\textless\textless\textless\textless\textless\textless\textless{} HEAD
 \textbf{Recursos:}
 =======
 Recursos:
->>>>>>> 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
+\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater{} 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Lenguaje de programación estadística \textbf{R:}
-  \url{https://cran.r-project.org/}
+  Lenguaje de programación estadística \textbf{R:} \url{https://cran.r-project.org/}
 \item
-  Interfaz de desarrollo integrado \textbf{Rstudio:}
-  \url{https://rstudio.com/products/rstudio/download/}
+  Interfaz de desarrollo integrado \textbf{Rstudio:} \url{https://rstudio.com/products/rstudio/download/}
 \item
   \textbf{Rtools:} \url{https://cran.r-project.org/bin/windows/Rtools/}
 \item
   \textbf{MiKTeX:} \url{https://miktex.org/download}
 \end{enumerate}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+\textless\textless\textless\textless\textless\textless\textless{} HEAD
+\textless\textless\textless\textless\textless\textless\textless{} HEAD
 Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en que fueron enumerados.
-
-\textbf{Opcional:}
 =======
-Se recomienda que la instalación de los recursos previamente
-mencionados, se realice en el orden en el que fueron enumerados.
->>>>>>> 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
+\textbf{\emph{Nota:}} Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
+\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater{} 0a235cafd6a5ae0e9aa5f1c48c61af8ec570aa53
 =======
-\textbf{\emph{Nota:}} Se recomienda que la instalación de los recursos
-previamente mencionados, se realice en el orden en el que fueron
-enumerados.
->>>>>>> 503c86fda5119bd72ddf76a272ac0f8f7c01d560
+\textbf{\emph{Nota:}} Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.\\
+\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater{} 503c86fda5119bd72ddf76a272ac0f8f7c01d560
 
 \textbf{Paquetes:}
 
@@ -224,19 +209,16 @@ enumerados.
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{Introducción}\label{intro}
+\hypertarget{intro}{%
+\chapter{Introducción}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}}
-after them, e.g., we can reference Chapter \ref{intro}. If you do not
-manually label them, there will be automatic labels anyway, e.g.,
-Chapter \ref{requi}.
+You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{requi}.
 
-Figures and tables with captions will be placed in \texttt{figure} and
-\texttt{table} environments, respectively.
+Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
 \KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -250,10 +232,7 @@ Figures and tables with captions will be placed in \texttt{figure} and
 \caption{Here is a nice figure!}\label{fig:nice-fig}
 \end{figure}
 
-Reference a figure by its code chunk label with the \texttt{fig:}
-prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can
-reference tables generated from \texttt{knitr::kable()}, e.g., see Table
-\ref{tab:nice-tab}.
+Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -299,22 +278,25 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \end{tabular}
 \end{table}
 
-You can write citations, too. For example, we are using the
-\textbf{bookdown} package \citep{R-bookdown} in this sample book, which
-was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
-\chapter{Visualización Estática y Dinámica}\label{visualizacion}
+\hypertarget{visualizacion}{%
+\chapter{Visualización Estática y Dinámica}\label{visualizacion}}
 
 Rmarkdown permite visualizar tablas y figuras de forma
 
-\section{V. Estática}\label{v.-estuxe1tica}
+\hypertarget{v.-estuxe1tica}{%
+\section{V. Estática}\label{v.-estuxe1tica}}
 
-\section{V. Dinámica}\label{v.-dinuxe1mica}
+\hypertarget{v.-dinuxe1mica}{%
+\section{V. Dinámica}\label{v.-dinuxe1mica}}
 
-\chapter{Acerca del autor}\label{acerca-del-autor}
+\hypertarget{acerca-del-autor}{%
+\chapter{Acerca del autor}\label{acerca-del-autor}}
 
 Alexander Andrade
 
-\bibliography{book.bib,packages.bib}
+\backmatter
+  \bibliography{book.bib,packages.bib}
 
 \end{document}
