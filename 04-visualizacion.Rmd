@@ -8,6 +8,13 @@ Rmarkdown permite visualizar tablas y figuras de forma
 knitr::kable(head(iris, 10))
 ```
 
+```{r, message=F}
+library(tidyverse)
+
+iris %>% 
+  ggplot(aes(Species, Sepal.Length, fill = Species)) +
+  geom_boxplot()
+```
 
 ## V. Dinámica
 
@@ -16,3 +23,14 @@ DT::datatable({
   iris
 })
 ```
+
+```{r, message=F}
+library(plotly)
+
+p <- iris %>% 
+  ggplot(aes(Species, Sepal.Length, fill = Species)) +
+  geom_boxplot()
+
+ggplotly(p)
+```
+
