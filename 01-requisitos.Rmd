@@ -1,10 +1,28 @@
 # Requisitos para el taller {#requi}
 
+## Conocimiento previo (Recomendado)
+
+- Entendimiento básico de R y RStudio.
+- Nivel básico de ``rmarkdown``
+
+**¿Qué ocurre si nunca he trabajado con R, Rstudio o rmarkdown?**
+
+Previo a este taller, se impartirán charlas y talleres en los siguientes temas:
+
+- R/RStudio
+- Rmarkdown
+- R shiny
+
+Los cuales brindarán un importante background teórico-práctico sobre R.
+
+## Software
+
 **Recursos:**
 
 1. Lenguaje de programación estadística **R:** <https://cran.r-project.org/>
-1. Interfaz de desarrollo integrado **Rstudio:** <https://rstudio.com/products/rstudio/download/>
-1. **Rtools:** <https://cran.r-project.org/bin/windows/Rtools/>
+
+1. Interfaz de desarrollo integrado **RStudio:** <https://rstudio.com/products/rstudio/download/>
+
 1. **MiKTeX:** <https://miktex.org/download>
 
 ***Nota:*** Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.

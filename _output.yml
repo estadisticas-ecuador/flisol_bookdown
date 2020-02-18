@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="https://www.facebook.com/stats.coaching/" target="blank">Estadística para No Estadísticos</a></li>
+        <li><a href="https://www.estadisticaparanoestadisticos.com/" target="blank">Estadística para No Estadísticos</a></li>
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:

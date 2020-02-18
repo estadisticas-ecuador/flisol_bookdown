@@ -1,21 +1,13 @@
 # Introducción {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(requi).
+La reproducibilidad es sumamente imporante en la generación de teoría científica, y en el proceso de enseñanza-aprendizaje, principalmente cuando se está enseñando (o aprendiendo) un lenguaje de programación. En tal contexto, el paquete ``bookdown`` permite compartir el código y los resultados de un experimento, ayudando al investigador o docente, a enfocarse en el aspecto científico y facilitando el proceso estético propio en la construcción de un libro. 
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+**Principales ventajas de ``bookdown``**
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
-
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
-
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+- Reproducibilidad de la investigación.
+- Existe una gran cantidad de temas o templates que permiten crear libros virtuales estéticamente agradables.
+- La optimicación del paquete con la interfaz de RStudio logra un vínculo amigable para el usuario.
+- La estructura de la herramienta resalta las características propias de la redacción científica.
+- Los formatos de salida del libro automáticamente contemplan: HTML, PDF, EPUB.
+- En formato HTML es posible presentar los resultados de forma dinámica, es decir, el lector podrá interactuar con la información que se comparte en el libro.
+- Es posible crear quiz interactivos con el lector, de tal manera que su aprendizaje se vea reforzado mediante la práctica.

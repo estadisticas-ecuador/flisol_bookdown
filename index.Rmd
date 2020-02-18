@@ -16,4 +16,11 @@ R es un lenguaje de programación estadística, que permite: importar, gestionar
 
 En el taller denominado *R como herramienta de escritura académico-científica con visualización estática y dinámica*, se estudian las ventajas que ofrece el paquete ``rmarkdown``, el cual permite generar reportes estáticos y dinámicos, con el fin de divulgar tanto los resultados de un estudio, como su metodología y el código utilizado. 
 
-Particularmente, el taller se enfoca en la creación de libros académico-científicos (en formato HTML, EPUB y PDF) mediante el paquete ``bookdown``, mismo que puede entenderse como una extensión de ``rmarkdown``. Al finalizar el taller, los asistentes adquirirán la capacidad de crear libros como el que se está visualizando en este momento.
+Particularmente, el taller se enfoca en la creación de libros académico-científicos (en formato HTML, EPUB y PDF) mediante el paquete ``bookdown``, mismo que puede entenderse como una extensión de ``rmarkdown``.  
+
+Al finalizar el taller, los asistentes serán capaces de:
+
+- Entender de manera global, el funcionamiento de ``rmarkdown``, su sintaxis y sus principales características.
+- Construir libros digitales mediante el paquete ``bookdown`` (similares al libro que se está visualizando en este momento).
+- Conocer la diferencia entre visualización estática y dinámica.
+- Incorporar las bondades de ``bookdown`` en la divulgación científica.
