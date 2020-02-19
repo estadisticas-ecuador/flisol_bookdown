@@ -1,10 +1,10 @@
 # Visualización Estática y Dinámica {#visualizacion}
 
-Como se mencionó en el capítulo anterior, una de las ventajas de ``bookdown`` es la visualización de resultados dinámica. En este apartado se presentan varios ejemplos con la intención de resaltar las bondades de la visualización dinámica sobre la visualización estática. Es importante tener en claro que la visualización dinámica de resultados es posible únicamente en la versión HTML del libro digital.
+Como se mencionó en el capítulo anterior, una de las ventajas de ``bookdown`` es la visualización dinámica de resultados. En este apartado se presentan varios ejemplos con la intención de resaltar las bondades de la visualización dinámica sobre la visualización estática. Es importante tener en claro que la visualización dinámica de resultados es posible únicamente en la versión HTML del libro digital.
 
 ## Visualización Estática
 
-**Ejemplo 1**
+### Ejemplo 1
 
 A continuación se presenta una tabla con las diez primeras observaciones del dataset ``Iris``. Este conjunto de datos está conformado por medidas de ciertas características físicas de pétalos y sépalos sobre 150 plantas, tomando en cuenta tres especies: Setosa, Versicolor y Virginica.
 
@@ -14,7 +14,7 @@ knitr::kable(head(iris, 10))
 
 Aún cuando la tabla es estéticamente agradable, únicamente se observa una cierta cantidad de datos, los cuales no siguen ningún orden específico, y además, no es posible filtrar la información según ciertos parámetros de interés. 
 
-**Ejemplo 2**
+### Ejemplo 2 {#ejm2}
 
 La información del dataset ``Iris`` se resume en un diagrama de caja (boxplot), el cual compara la longitud del sépalo de las plantas, tomando en cuenta las tres especies bajo estudio.
 
@@ -30,25 +30,38 @@ El boxplot es una herramienta visual muy importante y útil a la hora de compara
 
 ## Visualización Dinámica
 
-**Ejemplo 3**
+### Ejemplo 3
+
+Nuevamente se presenta el dataset ``Iris``, pero ahora mediante una tabla dinámica. En este caso el lector puede interactuar con la tabla, realizando las siguientes acciones:
+
+- Cambiar el número de observaciones que se muestran (***Show entries***). Por defecto se pueden mostrar 10, 25, 50 o 100 observaciones. Este rango de valores se puede cambiar según las necesidades del investigador.
+- Buscar (***Search***) un tipo de planta o un número en particular. Por ejemplo, el lector puede buscar la palabra "*virginica*", de tal forma que se muestren únicamente las observaciones de esta especie.
+- Ordenar el dataset según una de las variables, de forma ascendente o descendente. Para ello, el lector simplemente debe dar clic en el nombre de la variable que se quiera ordenar.
+- Visualizar (***Previous***) diferentes porciones del dataset.
 
 ```{r}
 DT::datatable({iris})
 ```
 
-**Ejemplo 4**
+### Ejemplo 4 {#ejm4}
+
+En este ejemplo se presenta el mismo boxplot del [Ejemplo 2](#ejm2), en formato dinámico. En este gráfico, el lector puede realizar las siguientes acciones:
+
+- Al pasar el puntero del mouse sobre el boxplot, es posible obtener información específica sobre los valores de: cuartiles, máximo, mínimo, datos atípicos.
+- En la parte superior del gráfico aparece una barra con las siguientes opciones: descargar el gráfico, realizar zoom, centrar la imagen, auto escalar, etc. El lector puede hacer uso de cualquiera de estas opciones sin preocuparse por afectar permanentemente el documento. 
+- Al dar clic sobre una de las tres especies que se muestran en la leyenda (***Species***), el lector podrá habilitar o deshabilitar cualquiera de los tres diagramas de caja que se muestran.
 
 ```{r, message=F}
-library(plotly)
-
 p <- iris %>% 
   ggplot(aes(Species, Sepal.Length, fill = Species)) +
   geom_boxplot()
 
-ggplotly(p)
+plotly::ggplotly(p)
 ```
 
-**Ejemplo 5**
+### Ejemplo 5
+
+Finalmente, se presenta otra forma de visualización dinámica del boxplot que hemos analizado en los ejemplos [2](#ejm2) y [4](#ejm4), en dichos ejemplos se ha visualizado únicamente la variable longitud del sépalo (*Sepal.Length*). A continuación, el lector podrá escoger la variable del dataset ``Iris`` que prefiera analizar.
 
 ```{r}
 knitr::include_app("https://vaashub.shinyapps.io/iris_boxplot/", 

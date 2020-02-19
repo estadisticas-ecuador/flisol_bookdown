@@ -1,13 +1,13 @@
 # Introducción {#intro}
 
-La reproducibilidad es sumamente imporante en la generación de teoría científica, y en el proceso de enseñanza-aprendizaje, principalmente cuando se está enseñando (o aprendiendo) un lenguaje de programación. En tal contexto, el paquete ``bookdown`` permite compartir el código y los resultados de un experimento, ayudando al investigador o docente, a enfocarse en el aspecto científico y facilitando el proceso estético propio en la construcción de un libro. 
+La reproducibilidad es sumamente importante en la generación de teoría científica, y en el proceso de enseñanza-aprendizaje, principalmente cuando se está enseñando (o aprendiendo) un lenguaje de programación. En tal contexto, el paquete ``bookdown`` permite compartir el código y los resultados de un experimento, ayudando al investigador o docente, a enfocarse en el aspecto científico y facilitando el proceso estético propio en la construcción de un libro. 
 
 **Principales ventajas de ``bookdown``**
 
 - Reproducibilidad de la investigación.
 - Existe una gran cantidad de temas o templates que permiten crear libros virtuales estéticamente agradables.
-- La optimicación del paquete con la interfaz de RStudio logra un vínculo amigable para el usuario.
+- La optimización del paquete con la interfaz de RStudio logra un vínculo amigable para el usuario.
 - La estructura de la herramienta resalta las características propias de la redacción científica.
 - Los formatos de salida del libro automáticamente contemplan: HTML, PDF, EPUB.
 - En formato HTML es posible presentar los resultados de forma dinámica, es decir, el lector podrá interactuar con la información que se comparte en el libro.
-- Es posible crear quiz interactivos con el lector, de tal manera que su aprendizaje se vea reforzado mediante la práctica.
+- Es posible crear quiz interactivos para el lector, de tal manera que su aprendizaje se vea reforzado mediante la práctica.
