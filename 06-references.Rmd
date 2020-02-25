@@ -1,6 +1,5 @@
-`r if (knitr::is_html_output()) '
 # Bibliografía {-}
-'`
+
 **Libros:**
 
 - *Bookdown: Authoring Books and Technical Documents with R Markdown* [@xie2016bookdown]
