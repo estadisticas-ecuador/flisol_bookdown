@@ -1,6 +1,6 @@
 # Visualización Estática y Dinámica {#visualizacion}
 
-Como se mencionó en el capítulo anterior, una de las ventajas de ``bookdown`` es la visualización dinámica de resultados. En este apartado se presentan varios ejemplos con la intención de resaltar las bondades de la visualización dinámica sobre la visualización estática. Es importante tener en claro que la visualización dinámica de resultados es posible únicamente en la versión HTML del libro digital.
+Como se mencionó en el capítulo anterior, una de las ventajas de ``bookdown`` es la visualización dinámica de resultados. En este apartado se presentan varios ejemplos con la intención de resaltar las bondades de la visualización dinámica, sobre la visualización estática. Es importante tener en claro que la visualización dinámica de resultados es posible únicamente en la versión HTML del libro digital.
 
 ## Visualización Estática
 
