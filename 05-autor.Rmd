@@ -6,7 +6,7 @@ knitr::include_graphics('new.png')
 
 **ALEXANDER ANDRADE**
 
-Asesor Estadístico en [Estadística para No Estadísticos](www.estadisticaparanoestadisticos.com)
+Asesor Estadístico en [Estadística para No Estadísticos](https://www.estadisticaparanoestadisticos.com)
 
 <br />
 
@@ -21,4 +21,4 @@ Asesor Estadístico en [Estadística para No Estadísticos](www.estadisticaparan
 
 **¿Tienes dudas o comentarios?**
 
-Contáctanos: [www.estadisticaparanoestadisticos.com](www.estadisticaparanoestadisticos.com)
+Contáctanos: [www.estadisticaparanoestadisticos.com](https://www.estadisticaparanoestadisticos.com)
