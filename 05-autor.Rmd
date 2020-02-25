@@ -1,3 +1,24 @@
 # Acerca del autor
 
-Alexander Andrade
+```{r, echo=F, out.width='100%', fig.align='left', fig.show='hold'}
+knitr::include_graphics('new.png')
+```
+
+**ALEXANDER ANDRADE**
+
+Asesor Estadístico en [Estadística para No Estadísticos](www.estadisticaparanoestadisticos.com)
+
+<br />
+
+**Estadística para No Estadísticos** brinda asesoría y tutoría estadística en:
+
+- Data Science para: Instituciones, Empresas y Profesionales
+- Trabajos de Titulación (Pregrado y Posgrado) 
+- Artículos Científicos (Papers)
+- Artículos de Revisión Bibliográfica mediante Minería de Texto
+
+<br />
+
+**¿Tienes dudas o comentarios?**
+
+Contáctanos: [www.estadisticaparanoestadisticos.com](www.estadisticaparanoestadisticos.com)
