@@ -24,3 +24,16 @@ Al finalizar el taller, los asistentes serán capaces de:
 - Construir libros digitales mediante el paquete ``bookdown`` (similares al libro que se está visualizando en este momento).
 - Conocer la diferencia entre visualización estática y dinámica.
 - Incorporar las bondades de ``bookdown`` en la divulgación científica.
+
+## Bibliografía básica {-}
+
+**Libros:**
+
+- *Bookdown: Authoring Books and Technical Documents with R Markdown* [@xie2016bookdown]
+- *R markdown: The definitive guide* [@xie2018r]
+- *Dynamic Documents with R and knitr* [@xie2015]
+
+**Paquetes:**
+
+- *Bookdown* [@R-bookdown]
+- *Rmarkdown* [@R-rmarkdown]

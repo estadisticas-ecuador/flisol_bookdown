@@ -1,14 +1,3 @@
-# Bibliografía {-}
-
-**Libros:**
-
-- *Bookdown: Authoring Books and Technical Documents with R Markdown* [@xie2016bookdown]
-- *R markdown: The definitive guide* [@xie2018r]
-- *Dynamic Documents with R and knitr* [@xie2015]
-
-**Paquetes:**
-
-- *Bookdown* [@R-bookdown]
-- *Rmarkdown* [@R-rmarkdown]
-
-## Referencias: {-}
+`r if (knitr::is_html_output()) '
+# Referencias {-}
+'`
