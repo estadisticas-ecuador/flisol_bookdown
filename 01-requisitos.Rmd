@@ -41,9 +41,34 @@ install.packages("tidyverse")
 install.packages("bookdown")
 ```
 
-3. ``tinytex``
+3. ``shiny``
+
+```{r, eval=F}
+install.packages("shiny")
+```
+
+4. ``knitr``
+
+```{r, eval=F}
+install.packages("knitr")
+```
+
+5. ``DT``
+
+```{r, eval=F}
+install.packages("DT")
+```
+
+6. ``plotly``
+
+```{r, eval=F}
+install.packages("plotly")
+```
+
+7. ``tinytex``
 
 ```{r, eval=F}
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
+
