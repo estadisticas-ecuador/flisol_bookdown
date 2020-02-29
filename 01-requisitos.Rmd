@@ -17,7 +17,7 @@ Los cuales brindarán un importante background teórico-práctico sobre R.
 
 ## Software
 
-**Recursos:**
+### Recursos indispensables
 
 1. Lenguaje de programación estadística **R:** <https://cran.r-project.org/>
 
@@ -27,7 +27,15 @@ Los cuales brindarán un importante background teórico-práctico sobre R.
 
 ***Nota:*** Se recomienda que la instalación de los recursos previamente mencionados, se realice en el orden en el que fueron enumerados.
 
-**Paquetes:**
+### Recursos recomendados
+
+1. Lector de PDF 
+
+1. Lector de EPUB
+
+***Nota:*** El lector de archivos PDF y archivos EPUB queda a disposición de los asistentes. Una posible opción es [FDReader](https://fbreader.org/) (recomendado).
+
+### Paquetes
 
 1. ``tidyverse``
 
