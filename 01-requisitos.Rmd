@@ -72,3 +72,9 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
+8. ``phantomjs``
+
+```{r, eval=F}
+install.packages("webshot")
+webshot::install_phantomjs()
+```
